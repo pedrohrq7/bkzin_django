@@ -58,7 +58,9 @@ ROOT_URLCONF = 'bkzin.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'base'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -120,14 +122,15 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+
 #Chamar os arquivos staticos pelo diretorio
 # STATICFILES_DIRS = [
-#     BASE_DIR / 'base' / 'static'
+#      BASE_DIR / 'base' / 'static'
 # ]
 
 #chamar os arquivos staticos usando a biblioteca os
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'base/static'),
+   os.path.join(BASE_DIR, 'base/static'),
 ]
 
 
